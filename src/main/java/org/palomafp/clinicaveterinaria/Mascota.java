@@ -9,6 +9,14 @@ public class Mascota {
     public Mascota() {
     }
 
+    public Mascota(int idMascota, String nombre, String tipoAnimal, String raza, DuenyoMascota duenyo) {
+        this.idMascota = idMascota;
+        this.nombre = nombre;
+        this.tipoAnimal = tipoAnimal;
+        this.raza = raza;
+        this.duenyo = duenyo;
+    }
+
     public int getIdMascota() {
         return idMascota;
     }

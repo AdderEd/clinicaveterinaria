@@ -11,6 +11,14 @@ public class Cita {
     public Cita() {
     }
 
+    public Cita(int idCita, Date fecha, Date hora, Veterinario veterinario, DuenyoMascota cliente) {
+        this.idCita = idCita;
+        this.fecha = fecha;
+        this.hora = hora;
+        this.veterinario = veterinario;
+        this.cliente = cliente;
+    }
+
     public int getIdCita() {
         return idCita;
     }

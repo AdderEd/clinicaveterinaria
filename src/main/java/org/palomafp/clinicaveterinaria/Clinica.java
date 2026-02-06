@@ -13,6 +13,14 @@ public class Clinica {
         this.veterinarios = new ArrayList<>();
     }
 
+    public Clinica(int idClinica, String nombreClinica, String direccion, String telefono) {
+        this.idClinica = idClinica;
+        this.nombreClinica = nombreClinica;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.veterinarios = new ArrayList<>();
+    }
+
     public int getIdClinica() {
         return idClinica;
     }

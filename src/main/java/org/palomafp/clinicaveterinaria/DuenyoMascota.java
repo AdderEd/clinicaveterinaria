@@ -15,6 +15,15 @@ public class DuenyoMascota {
         this.mascotas = new ArrayList<>();
     }
 
+    public DuenyoMascota(int idDuenyo, String nombre, String dni, String telefono, String correo) {
+        this.idDuenyo = idDuenyo;
+        this.nombre = nombre;
+        this.dni = dni;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.mascotas = new ArrayList<>();
+    }
+
     public int getIdDuenyo() {
         return idDuenyo;
     }

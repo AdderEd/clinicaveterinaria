@@ -15,6 +15,16 @@ public class Veterinario {
         this.citas = new ArrayList<>();
     }
 
+    public Veterinario(int idVeterinario, String nombre, String dni, String telefono, String correo, Clinica clinica) {
+        this.idVeterinario = idVeterinario;
+        this.nombre = nombre;
+        this.dni = dni;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.clinica = clinica;
+        this.citas = new ArrayList<>();
+    }
+
     public int getIdVeterinario() {
         return idVeterinario;
     }
