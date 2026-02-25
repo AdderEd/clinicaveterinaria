@@ -1,10 +1,15 @@
 package org.palomafp.clinicaveterinaria;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class clinicaveterinariaDAO {
 
     private List<Cita> citas = null;
+
+    public clinicaveterinariaDAO() {
+        this.citas = new ArrayList<>();
     
     // Objeto
     Clinica clinica = new Clinica(1, "Clínica Veterinaria PalomaFP", "Calle Principal 123, Madrid", "914567890");
