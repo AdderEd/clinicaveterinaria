@@ -3,12 +3,9 @@
 classDiagram
 
 Clinica "1" o-- "0..*" Veterinario : emplea
-Veterinario "1" --> "1" Clinica : trabaja_en
-Veterinario "1" --> "0..*" Cita : atiende
-DuenoMascota "1" -- "0..*" Cita : solicita
-DuenoMascota "1" -- "1..*" Mascota : tiene
+Veterinario "1" <-- "0..*" Cita : atiende
+DuenoMascota "1" *-- "1..*" Mascota : tiene
 Cita "1" --> "1" Mascota : para
-Mascota "1" -- "0..*" Cita : tiene
 
 class Clinica {
     int idClinica
@@ -33,7 +30,7 @@ class Cita {
     Date fecha
     Date hora
     Veterinario veterinario
-    DuenoMascota cliente
+    Mascota mascota
 }
 
 class DuenoMascota {
