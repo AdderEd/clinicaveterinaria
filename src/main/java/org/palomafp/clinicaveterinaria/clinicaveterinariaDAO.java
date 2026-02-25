@@ -22,7 +22,6 @@ public class clinicaveterinariaDAO {
     public getCita() {
 
         return this.citas.get(0);
-
     }
 
     public getAllCitas() {
