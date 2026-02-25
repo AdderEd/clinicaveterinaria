@@ -4,9 +4,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        // Llamar al método mostrarInformacion()
-        clinicaveterinariaDAO dao = new clinicaveterinariaDAO();
-        dao.mostrarInformacion(dao.clinica, dao.veterinario, dao.duenyoMascota, dao.mascota, dao.cita);
+        // Mostrar la información de la cita
+
+        CitaDAO dao = new CitaDAO();
+
+        System.out.println(dao.toString());
         
     }
 }
