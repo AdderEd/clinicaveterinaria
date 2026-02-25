@@ -1,4 +1,5 @@
 package org.palomafp.clinicaveterinaria;
+
 import java.util.Date;
 
 public class Cita {
@@ -7,7 +8,7 @@ public class Cita {
     private Date hora;
     private Veterinario veterinario;
     private Mascota mascota;
-    
+
     public Cita(int idCita, Date fecha, Date hora, Veterinario veterinario, Mascota mascota) {
         this.idCita = idCita;
         this.fecha = fecha;
@@ -55,4 +56,17 @@ public class Cita {
     public void setMascota(Mascota mascota) {
         this.mascota = mascota;
     }
+
+    @Override
+    public String toString() {
+        String info = "ID de la cita: " + this.idCita + "\n";
+        info += "  Fecha: " + this.fecha + " Hora: " + this.hora + "\n";
+        info += "  Veterinario: " + this.veterinario.getNombre() + "\n";
+        info += "  Mascota: " + this.mascota.getNombre() + " (tipo: " + this.mascota.getTipoAnimal() + ", raza: "
+                + this.mascota.getRaza() + ")\n";
+        info += "    Dueño: " + this.mascota.getDuenyo().getNombre() + " (DNI: " + this.mascota.getDuenyo().getDni()
+                + ")\n";
+        return info;
+    }
+
 }
