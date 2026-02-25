@@ -9,6 +9,8 @@ public class App
      
         // Declaraciones
 
+        CitaDAO citaDAO = new CitaDAO();
+
         Scanner sc = new Scanner(System.in);
         boolean bucleMenu = true;
         int opcionesMenu;
@@ -31,14 +33,29 @@ public class App
 
                 case 1:
                     
+                    System.out.println("Introduce el indice de la cita que quieres mostrar (1-5):");
+                    int indice = sc.nextInt();
+
+                    Cita cita = citaDAO.delCita(indice - 1);
+                    if (cita != null) {
+                        System.out.println("Cita encontrada:");
+                        System.out.println(cita);
+                    } else {
+                        System.out.println("No se encontró una cita con ese índice.");
+                    }
+
                     break;
             
                 case 2:
 
+                   Cita citaRandom = citaDAO.getCitaRandom();
+                   System.out.println("Cita aleatoria:");
+                   System.out.println(citaRandom);
                     break;
 
                 case 3:
 
+                    System.out.println(citaDAO.mostrarInformacion());
                     break;
 
                 case 4:
