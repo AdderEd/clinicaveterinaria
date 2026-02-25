@@ -9,10 +9,6 @@ public class Clinica {
     private String telefono;
     private List<Veterinario> veterinarios;
 
-    public Clinica() {
-        this.veterinarios = new ArrayList<>();
-    }
-
     public Clinica(int idClinica, String nombreClinica, String direccion, String telefono) {
         this.idClinica = idClinica;
         this.nombreClinica = nombreClinica;

@@ -11,10 +11,6 @@ public class DuenyoMascota {
     private List<Mascota> mascotas;
     private Cita cita;
 
-    public DuenyoMascota() {
-        this.mascotas = new ArrayList<>();
-    }
-
     public DuenyoMascota(int idDuenyo, String nombre, String dni, String telefono, String correo) {
         this.idDuenyo = idDuenyo;
         this.nombre = nombre;

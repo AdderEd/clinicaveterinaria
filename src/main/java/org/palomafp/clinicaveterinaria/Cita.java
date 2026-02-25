@@ -6,17 +6,14 @@ public class Cita {
     private Date fecha;
     private Date hora;
     private Veterinario veterinario;
-    private DuenyoMascota cliente;
-
-    public Cita() {
-    }
-
-    public Cita(int idCita, Date fecha, Date hora, Veterinario veterinario, DuenyoMascota cliente) {
+    private Mascota mascota;
+    
+    public Cita(int idCita, Date fecha, Date hora, Veterinario veterinario, Mascota mascota) {
         this.idCita = idCita;
         this.fecha = fecha;
         this.hora = hora;
         this.veterinario = veterinario;
-        this.cliente = cliente;
+        this.mascota = mascota;
     }
 
     public int getIdCita() {
@@ -51,11 +48,11 @@ public class Cita {
         this.veterinario = veterinario;
     }
 
-    public DuenyoMascota getCliente() {
-        return cliente;
+    public Mascota getMascota() {
+        return mascota;
     }
 
-    public void setCliente(DuenyoMascota cliente) {
-        this.cliente = cliente;
+    public void setMascota(Mascota mascota) {
+        this.mascota = mascota;
     }
 }

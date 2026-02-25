@@ -6,9 +6,6 @@ public class Mascota {
     private String raza;
     private DuenyoMascota duenyo;
 
-    public Mascota() {
-    }
-
     public Mascota(int idMascota, String nombre, String tipoAnimal, String raza, DuenyoMascota duenyo) {
         this.idMascota = idMascota;
         this.nombre = nombre;

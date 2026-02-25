@@ -11,10 +11,6 @@ public class Veterinario {
     private List<Cita> citas;
     private Clinica clinica;
 
-    public Veterinario() {
-        this.citas = new ArrayList<>();
-    }
-
     public Veterinario(int idVeterinario, String nombre, String dni, String telefono, String correo, Clinica clinica) {
         this.idVeterinario = idVeterinario;
         this.nombre = nombre;
