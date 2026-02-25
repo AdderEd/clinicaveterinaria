@@ -16,7 +16,7 @@ public class clinicaveterinariaDAO {
     Veterinario veterinario = new Veterinario(1, "Dr. Carlos García", "12345678A", "612345678", "carlos@veterinaria.com", clinica);
     DuenyoMascota duenyoMascota = new DuenyoMascota(1, "Juan Pérez", "87654321B", "687654321", "juan@email.com");
     Mascota mascota = new Mascota(1, "Max", "Perro", "Golden Retriever", duenyoMascota);
-    Cita cita = new Cita(1, new Date(), new Date(), veterinario, duenyoMascota);
+    Cita cita = new Cita(1, new Date(), new Date(), veterinario, mascota);
     
     // Métodos
 
@@ -35,6 +35,15 @@ public class clinicaveterinariaDAO {
         this.citas(num) = null;
 
         return this.citas(num);
+    }
+
+    @Override
+    public String toString() {
+        return "Cita" + "\n" +
+                "Fecha: " + cita.getFecha() + "\n" +
+                "Hora: " + cita.getHora() + "\n" +
+                "Veterinario: " + cita.getVeterinario().getNombre() + "\n" +
+                "Mascota: " + cita.getMascota().getNombre() + "\n";
     }
 
 }
