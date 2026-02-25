@@ -69,23 +69,16 @@ public class CitaDAO {
     }
 
     /**
-     * El siguiente método devuelve una cadena con información completa de la clínica y de todas las citas
+     * El siguiente método devuelve una cadena con información de todas las citas
      * almacenadas en esta clase. Se utilizan los getters de cada clase para acceder
      * a los datos (nombre del veterinario, nombre de la mascota, etc.).
      */
     public String mostrarInformacion() {
         String info = "";
 
-        // Datos de la clínica y del veterinario sobreexplotado
-        info += "Clínica: " + clinica.getNombreClinica();
-        info += " (dirección: " + clinica.getDireccion();
-        info += ", teléfono: " + clinica.getTelefono() + "\n";
-        info += "Veterinario de guardia: " + veterinario.getNombre();
-        info += " (DNI: " + veterinario.getDni() + ")\n\n";
-
         // Detalles de cada cita
         for (Cita c : citas) {
-            info += "Cita ID: " + c.getIdCita() + "\n";
+            info += "ID de la cita: " + c.getIdCita() + "\n";
             info += "  Fecha: " + c.getFecha() + " Hora: " + c.getHora() + "\n";
             info += "  Veterinario: " + c.getVeterinario().getNombre() + "\n";
             Mascota m = c.getMascota();
