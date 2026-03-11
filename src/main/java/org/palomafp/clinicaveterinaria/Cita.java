@@ -3,6 +3,7 @@ package org.palomafp.clinicaveterinaria;
 import java.util.Date;
 
 public class Cita {
+    
     private int idCita;
     private Date fecha;
     private Date hora;
