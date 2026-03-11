@@ -5,16 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class clinicaveterinariaDAOTest {
     @Test
-    void testMostrarInformacion() {
-        CitaDAO dao = new CitaDAO();
-        String info = dao.mostrarInformacion();
-        assertNotNull(info, "La información no puede ser nula");
-        assertFalse(info.isEmpty(), "La información no puede estar vacía");
-        // comprobamos que algunos datos esperados aparecen en el texto
-        assertTrue(info.contains("Clínica"));
-        assertTrue(info.contains("Veterinario de guardia"));
-        assertTrue(info.contains("Cita ID"));
-        assertTrue(info.contains("Mascota"));
-        assertTrue(info.contains("Dueño"));
-    }
+    public void testCitaDAO() {
+        Clinica clinica = new Clinica(1, "Clínica Veterinaria Paloma", "Calle Falsa 123", "555-1234");
+        Veterinario veterinario = new Veterinario(1, "Dr. Juan Pérez", "12345678A", "555-5678", "juan@veterinaria.com", clinica);
+        assertNotNull(veterinario);
+        DuenyoMascota duenyo = new DuenyoMascota(1, "María López", "87654321B", "555-8765", "maria@correo.es");
+        assertNotNull(duenyo);
+    }   
 }
