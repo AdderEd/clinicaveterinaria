@@ -3,34 +3,32 @@ package org.palomafp.clinicaveterinaria;
 import java.util.Scanner;
 
 /**
-Clase que permite ejecutar y visualizar el programa.
-@author Andrés Cuerva
-@version 1.0
+*Clase que permite ejecutar y visualizar el programa.
+*@author Andrés Cuerva
+*@version 1.0
 */
-
 public class App 
 {
 
 /**
-Clase main que contiene el menú y las variables que se van a usar.
-@param args Parámetros que se usan en el main.
+*Clase main que contiene el menú y las variables que se van a usar.
+*@param args Parámetros que se usan en el main.
 */
     public static void main( String[] args )
     {
      
         // Declaraciones
         CitaDAO citaDAO = new CitaDAO();
-
         /**
-        Variable de tipo Scanner que sirve para poder pasar valores por teclado.
+        *Variable de tipo Scanner que sirve para poder pasar valores por teclado.
         */
         Scanner sc = new Scanner(System.in);
         /**
-        Variable boolean que sirve para repetir el menú de forma constante hasta que el usuario decida salir.
+        *Variable boolean que sirve para repetir el menú de forma constante hasta que el usuario decida salir.
         */
         boolean bucleMenu = true;
         /**
-        Variable de tipo int que sirve para poder seleccionar las opciones del menú asignándole el valor mediante el Scanner.
+        *Variable de tipo int que sirve para poder seleccionar las opciones del menú asignándole el valor mediante el Scanner.
         */
         int opcionesMenu;
 
