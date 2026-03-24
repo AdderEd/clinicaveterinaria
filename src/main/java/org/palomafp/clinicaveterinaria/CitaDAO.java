@@ -4,15 +4,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Clase CitaDAO:
+ * Gestiona el conjunto de citas predefinidas y ofrece métodos de acceso.
+ *
+ * @version 1.0
+ * @author Adrián Stephano Alvarado Dávila
+ */
 public class CitaDAO {
 
+    // Lista de citas disponibles en la clínica
     private List<Cita> citas;
 
-    // Objetos
+    // Objetos de ejemplo para rellenar la lista de citas
     private Clinica clinica = new Clinica(1, "Clínica Veterinaria PalomaFP", "Calle Principal 123, Madrid",
             "914567890");
 
-    // Veterinario sobreexplotado laboralmente
     private Veterinario veterinario = new Veterinario(1, "Dr. Carlos García", "12345678A", "612345678",
             "carlos@veterinaria.com", clinica);
 
@@ -36,13 +43,17 @@ public class CitaDAO {
             "luis@correo.net");
     private Mascota mascota5 = new Mascota(5, "Nala", "Gato", "Maine Coon", duenyoMascota5);
 
-    // Objetos principales
+    // Citas:
     private Cita cita1 = new Cita(1, new Date(), new Date(), veterinario, mascota1);
     private Cita cita2 = new Cita(2, new Date(), new Date(), veterinario, mascota2);
     private Cita cita3 = new Cita(3, new Date(), new Date(), veterinario, mascota3);
     private Cita cita4 = new Cita(4, new Date(), new Date(), veterinario, mascota4);
     private Cita cita5 = new Cita(5, new Date(), new Date(), veterinario, mascota5);
 
+    /**
+     * Constructor por defecto de CitaDAO que inicializa la lista de citas
+     * con datos de ejemplo.
+     */
     public CitaDAO() {
         this.citas = new ArrayList<>();
         // Llenamos la lista con los objetos creados
@@ -54,6 +65,11 @@ public class CitaDAO {
     }
 
     // Métodos
+    /**
+     * Obtiene una cita aleatoria de la lista.
+     *
+     * @return Cita seleccionada aleatoriamente o null si no hay citas.
+     */
     public Cita getCitaRandom() {
         if (this.citas == null || this.citas.isEmpty()) {
             return null;
@@ -62,6 +78,12 @@ public class CitaDAO {
         return this.citas.get(indiceAleatorio);
     }
 
+    /**
+     * Obtiene una cita según el índice proporcionado.
+     *
+     * @param indice índice de la lista de citas.
+     * @return Cita correspondiente al índice o null si el índice es inválido.
+     */
     public Cita getCitaPorIndice(int indice) {
         if (indice < 0 || indice >= this.citas.size()) {
             return null;
@@ -69,10 +91,20 @@ public class CitaDAO {
         return this.citas.get(indice);
     }
 
+    /**
+     * Devuelve la lista completa de citas.
+     *
+     * @return Lista de citas.
+     */
     public List<Cita> getAllCitas() {
         return this.citas;
     }
 
+    /**
+     * Representación en texto de todas las citas.
+     *
+     * @return cadena con el detalle de cada cita.
+     */
     @Override
     public String toString() {
         String listado = "=== TODAS LAS CITAS ===\n";
